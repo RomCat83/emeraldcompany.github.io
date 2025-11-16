@@ -1,10 +1,31 @@
-body {
-  background-image: url("MRCBG.png"); /* Replace with your image path */
-  background-repeat: repeat; /* This is the default, but explicitly setting it is good practice */
-}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moving Repeating Background</title>
+    <style>
+        body {
+            background-image: url("MRCBG.png"); /* Replace with your image path */
+            background-repeat: repeat;
+            animation: moveBackground 10s linear infinite;
+        }
 
-
-<audio autoplay loop>
+        @keyframes moveBackground {
+            from {
+                background-position: 0 0;
+            }
+            to {
+                background-position: 100% 0; /* Moves horizontally */
+            }
+        }
+    </style>
+</head>
+<body>
+    <audio autoplay loop>
    <source src="TMRCSET.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
   </audio>
+</body>
+</html>
+
+
