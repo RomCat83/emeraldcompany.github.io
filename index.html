@@ -1,3 +1,277 @@
+<title> Randomness69 World </title>
+  <head>
+   <style>
+     /* title and things and shit*/
+     #windowdiv {
+      border: 6px solid black;
+      border-radius: 2px;
+      padding: 0px;
+      margin: 0px 0;
+     }     
+     #windowdivcont {
+      width: 50%; 
+      position: absolute;
+      max-width: 600px;
+      z-index: 3;
+     }
+     #windowtopcont {
+      margin-bottom: 0px;
+     }
+     #windowtop {
+      background-image: linear-gradient(to right, grey , darkgrey);
+      margin-top: 0px;
+      height: 35px;
+      margin-bottom: 0px;
+      border-style: solid;
+      border-width: 0px 0px 5px 0px;
+     }
+     #wintoptext {
+      font-family: Courier New;
+      color: white;
+      margin-left: 10px;
+      font-size: 20px;
+      padding: 4px 0;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      margin-right: 0px;
+      -webkit-text-stroke: 1px black;
+     }
+     #xbutton {
+      color: black;
+      position: relative;
+      left: 35%;
+      line-height: 25px;
+      margin-bottom: 0px;
+      height: 25px;
+      font-size:20px;
+      display: inline-flex;
+      align-items: center;
+     }
+     #windowcontents {
+      background: lightgrey;
+      margin-bottom: 0px;
+      height: 100%;
+     }
+     #mustext {
+      font-family: sillymariofont;
+      font-size: 15px;
+      margin-bottom: 0px;
+      color: green;
+      text-decoration: underline;
+      -webkit-text-stroke: 1.5px black;
+     }
+     html {
+      height: 100%;
+     }
+     body {
+      background-image: repeating-linear-gradient(white, lightgrey 10%, white 40%);
+      background-repeat: no-repeat;
+      height: 100%;
+      margin: 0;
+     }
+     
+     @font-face {
+      font-family: sillymariofont;
+      src: url(https://randomness69js.github.io/SuperMario256.ttf);
+     }
+     @font-face {
+      font-family: sillymariofont2;
+      src: url(https://randomness69js.github.io/SuperMarioBeta256.ttf);
+     }
+    
+
+     #smg200icon {
+      margin: 0;
+     }
+     
+     #toptitle {
+      position: absolute;
+      top: 30%;
+      left: 50%;
+     -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+     }
+     /* USED TO BE 50PX */
+     #title {
+      font-family: sillymariofont;
+      font-size: 50px;
+      color: white;
+      margin-top: 0px;
+      margin-bottom: -30px;
+        -webkit-text-stroke: 3px black;
+     }
+     
+     #version {
+      color: yellow;
+      font-family: sillymariofont;
+      font-size: 30px;
+      margin-bottom: -10px;
+      -webkit-text-stroke: 3px orange;
+     }
+   
+  
+     /* teh buttonz */
+     @property --grad1 {
+      syntax: '<color>';
+      initial-value: white;
+      inherits: false;
+     }
+     @property --grad2 {
+      syntax: '<color>';
+      initial-value: grey;
+      inherits: false;
+     }
+
+     #buttons {
+      font-size:10px;
+      position: absolute;
+      top: 51%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      transition-duration: 1s;
+     }
+     #morebuttons {
+      font-size:10px;
+      position: absolute;
+      top: 56%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      transition-duration: 1s;
+     }
+    #donatediv {
+      font-size:10px;
+      position: absolute;
+      top: 64%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      transition-duration: 1s;
+     }
+     #button1 {
+      position: relative;
+      top: 0;
+      left: 0;
+      --grad1: white;
+      --grad2: lightgrey;
+      background: linear-gradient(var(--grad1), var(--grad2));
+      color: white;
+      font-family: sillymariofont2;
+       -webkit-text-stroke: 1.5px black;
+      font-size: 20px;
+      text-align: center;
+      padding: 7px 32px;
+      border-radius: 14px;
+      transition: --grad1 0.1s, --grad2 0.2s;
+     }
+     #button1:hover {
+      --grad1: lightgrey;
+      --grad2: grey;
+      position: relative;
+      top: 0;
+      left: 0;
+     }
+     
+     
+     #button2 {
+      position: relative;
+      top: 0;
+      left: 0;
+      --grad1: white;
+      --grad2: lightgrey;
+      background: linear-gradient(var(--grad1), var(--grad2));
+      color: white;
+      font-family: sillymariofont2;
+       -webkit-text-stroke: 1.5px black;
+      font-size: 20px;
+      text-align: center;
+      padding: 7px 32px;
+      border-radius: 14px;
+      transition: --grad1 0.1s, --grad2 0.2s;
+     }
+     #button2:hover {
+      --grad1: lightgrey;
+      --grad2: grey;
+      position: relative;
+      top: 0;
+      left: 0;
+     }
+     #button3 {
+      position: relative;
+      top: 0;
+      left: 0;
+      --grad1: white;
+      --grad2: lightgrey;
+      background: linear-gradient(var(--grad1), var(--grad2));
+      color: white;
+      font-family: sillymariofont2;
+       -webkit-text-stroke: 1.5px black;
+      font-size: 20px;
+      text-align: center;
+      padding: 7px 32px;
+      border-radius: 14px;
+      transition: --grad1 0.1s, --grad2 0.2s;
+     }
+     #button3:hover {
+      --grad1: lightgrey;
+      --grad2: grey;
+      position: relative;
+      top: 0;
+      left: 0;
+     }  
+     #button4 {
+      position: relative;
+      top: 0;
+      left: 0;
+      --grad1: white;
+      --grad2: lightgrey;
+      background: linear-gradient(var(--grad1), var(--grad2));
+      color: white;
+      font-family: sillymariofont2;
+       -webkit-text-stroke: 1.5px black;
+      font-size: 20px;
+      text-align: center;
+      padding: 7px 32px;
+      border-radius: 14px;
+      transition: --grad1 0.1s, --grad2 0.2s;
+     }
+     #button4:hover {
+      --grad1: lightgrey;
+      --grad2: grey;
+      position: relative;
+      top: 0;
+      left: 0;
+     }
+   </style>
+   
+   
+  </head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <center>
   <div id="buttons">
     <a href="episodes.html"> <button id="button1"> VIDEOS </button> </a><a>
