@@ -1,70 +1,14 @@
-<title> Randomness69 World </title>
+
+<!DOCTYPE html>
+<html>
+  <title>EmCo Central</title>
   <head>
    <style>
-     /* title and things and shit*/
-     #windowdiv {
-      border: 6px solid black;
-      border-radius: 2px;
-      padding: 0px;
-      margin: 0px 0;
-     }     
-     #windowdivcont {
-      width: 50%; 
-      position: absolute;
-      max-width: 600px;
-      z-index: 3;
-     }
-     #windowtopcont {
-      margin-bottom: 0px;
-     }
-     #windowtop {
-      background-image: linear-gradient(to right, grey , darkgrey);
-      margin-top: 0px;
-      height: 35px;
-      margin-bottom: 0px;
-      border-style: solid;
-      border-width: 0px 0px 5px 0px;
-     }
-     #wintoptext {
-      font-family: Courier New;
-      color: white;
-      margin-left: 10px;
-      font-size: 20px;
-      padding: 4px 0;
-      margin-top: 0px;
-      margin-bottom: 0px;
-      margin-right: 0px;
-      -webkit-text-stroke: 1px black;
-     }
-     #xbutton {
-      color: black;
-      position: relative;
-      left: 35%;
-      line-height: 25px;
-      margin-bottom: 0px;
-      height: 25px;
-      font-size:20px;
-      display: inline-flex;
-      align-items: center;
-     }
-     #windowcontents {
-      background: lightgrey;
-      margin-bottom: 0px;
-      height: 100%;
-     }
-     #mustext {
-      font-family: sillymariofont;
-      font-size: 15px;
-      margin-bottom: 0px;
-      color: green;
-      text-decoration: underline;
-      -webkit-text-stroke: 1.5px black;
-     }
      html {
       height: 100%;
      }
      body {
-      background-image: repeating-linear-gradient(white, lightgrey 10%, white 40%);
+      background-image: repeating-linear-gradient(black, black 10%, black 40%);
       background-repeat: no-repeat;
       height: 100%;
       margin: 0;
@@ -79,197 +23,135 @@
       src: url(https://randomness69js.github.io/SuperMarioBeta256.ttf);
      }
     
-
-     #smg200icon {
+     header {
+      text-align: center;
+      padding: 150px;
+      border-bottom: 4px solid #000000;
+     }
+     
+     #smg200worldicon {
       margin: 0;
+      margin-top: 60px;
+      margin-bottom: -30px;
      }
      
      #toptitle {
       position: absolute;
-      top: 30%;
+      top: 10%;
       left: 50%;
      -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
      }
-     /* USED TO BE 50PX */
+     
      #title {
       font-family: sillymariofont;
-      font-size: 50px;
-      color: white;
+      font-size: 80px;
+      color: red;
       margin-top: 0px;
       margin-bottom: -30px;
-        -webkit-text-stroke: 3px black;
+        -webkit-text-stroke: 3px white;
      }
-     
-     #version {
-      color: yellow;
-      font-family: sillymariofont;
-      font-size: 30px;
-      margin-bottom: -10px;
-      -webkit-text-stroke: 3px orange;
+     #card {
+      background: linear-gradient(0deg, rgba(5, 5, 5, 1), rgba(45, 45, 45, 1));
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+      outline: 5px solid white;
      }
-   
-  
-     /* teh buttonz */
-     @property --grad1 {
-      syntax: '<color>';
-      initial-value: white;
-      inherits: false;
+     #charlist {
+      width: 90%;
+      margin: 0 auto;
+      max-width: 1200px;
      }
-     @property --grad2 {
-      syntax: '<color>';
-      initial-value: grey;
-      inherits: false;
+     .front {
+      position: sticky;
+      z-index: 10;
      }
-
-     #buttons {
-      font-size:10px;
-      position: absolute;
-      top: 51%;
-      left: 50%;
-      -ms-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
-      transition-duration: 1s;
-     }
-     #morebuttons {
-      font-size:10px;
-      position: absolute;
-      top: 56%;
-      left: 50%;
-      -ms-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
-      transition-duration: 1s;
-     }
-    #donatediv {
-      font-size:10px;
-      position: absolute;
-      top: 64%;
-      left: 50%;
-      -ms-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
-      transition-duration: 1s;
-     }
-     #button1 {
-      position: relative;
-      top: 0;
-      left: 0;
-      --grad1: white;
-      --grad2: lightgrey;
-      background: linear-gradient(var(--grad1), var(--grad2));
-      color: white;
-      font-family: sillymariofont2;
-       -webkit-text-stroke: 1.5px black;
-      font-size: 20px;
-      text-align: center;
-      padding: 7px 32px;
-      border-radius: 14px;
-      transition: --grad1 0.1s, --grad2 0.2s;
-     }
-     #button1:hover {
-      --grad1: lightgrey;
-      --grad2: grey;
-      position: relative;
-      top: 0;
-      left: 0;
-     }
-     
-     
-     #button2 {
-      position: relative;
-      top: 0;
-      left: 0;
-      --grad1: white;
-      --grad2: lightgrey;
-      background: linear-gradient(var(--grad1), var(--grad2));
-      color: white;
-      font-family: sillymariofont2;
-       -webkit-text-stroke: 1.5px black;
-      font-size: 20px;
-      text-align: center;
-      padding: 7px 32px;
-      border-radius: 14px;
-      transition: --grad1 0.1s, --grad2 0.2s;
-     }
-     #button2:hover {
-      --grad1: lightgrey;
-      --grad2: grey;
-      position: relative;
-      top: 0;
-      left: 0;
-     }
-     #button3 {
-      position: relative;
-      top: 0;
-      left: 0;
-      --grad1: white;
-      --grad2: lightgrey;
-      background: linear-gradient(var(--grad1), var(--grad2));
-      color: white;
-      font-family: sillymariofont2;
-       -webkit-text-stroke: 1.5px black;
-      font-size: 20px;
-      text-align: center;
-      padding: 7px 32px;
-      border-radius: 14px;
-      transition: --grad1 0.1s, --grad2 0.2s;
-     }
-     #button3:hover {
-      --grad1: lightgrey;
-      --grad2: grey;
-      position: relative;
-      top: 0;
-      left: 0;
-     }  
-     #button4 {
-      position: relative;
-      top: 0;
-      left: 0;
-      --grad1: white;
-      --grad2: lightgrey;
-      background: linear-gradient(var(--grad1), var(--grad2));
-      color: white;
-      font-family: sillymariofont2;
-       -webkit-text-stroke: 1.5px black;
-      font-size: 20px;
-      text-align: center;
-      padding: 7px 32px;
-      border-radius: 14px;
-      transition: --grad1 0.1s, --grad2 0.2s;
-     }
-     #button4:hover {
-      --grad1: lightgrey;
-      --grad2: grey;
-      position: relative;
-      top: 0;
-      left: 0;
+     .back {
+      position: sticky;
+      z-index: 1;
      }
    </style>
    
    
   </head>
+  <body>
+  <audio autoplay loop>
+   <source src="nostalgia.mp3" type="audio/mpeg">
+   Your browser does not support the audio element.
+  </audio>
+  <header>
+  <div id="toptitle">
+   
+   <p id="title"> Characters </p>
+  </div>
+  </header>
+  <div id="charlist">
+   <center> 
+    <div id="card">
+     <a href="episodes.html"> <img id="char1" class="" src="Wii-U.png" height="150px" width="150px"> </a>
+ 
+     <a href="#" onclick="javascript:outoforder2();"> <img id="devkit" src="https://randomness69js.github.io/info/characterphotos/CharDevkit.jpg" height="150px" width="150px"> </a>
+
+    </div> 
+  </center>
+  </div>
+  <script>
+  const char1=document.getElementById("char1")
+  const char2=document.getElementById("char2")
+  const char3=document.getElementById("devkit")
+  const char4=document.getElementById("char4")
+  const char5=document.getElementById("char5")
+  const char6=document.getElementById("char6")
+  const smglogo=document.getElementById("smg200worldicon")
+  char1.addEventListener("mouseleave",(event)=>{char1.style="transition: 0.3s; transform: scale(1,1);"; char1.className="back"}); 
+  char1.addEventListener("mouseover",(event)=>{char1.style="transition: 0.3s; transform: scale(1.2,1.2);";char1.className="front"});
+  char2.addEventListener("mouseleave",(event)=>{char2.style="transition: 0.3s; transform: scale(1,1);"; char2.className="back"}); 
+  char2.addEventListener("mouseover",(event)=>{char2.style="transition: 0.3s; transform: scale(1.2,1.2);"; char2.className="front"});
+  char3.addEventListener("mouseleave",(event)=>{char3.style="transition: 0.3s; transform: scale(1,1);"; char3.className="back"}); 
+  char3.addEventListener("mouseover",(event)=>{char3.style="transition: 0.3s; transform: scale(1.2,1.2);"; char3.className="front"});
+  char4.addEventListener("mouseleave",(event)=>{char4.style="transition: 0.3s; transform: scale(1,1);"; char4.className="back"}); 
+  char4.addEventListener("mouseover",(event)=>{char4.style="transition: 0.3s; transform: scale(1.2,1.2);"; char4.className="front"});
+  char5.addEventListener("mouseleave",(event)=>{char5.style="transition: 0.3s; transform: scale(1,1);"; char5.className="back"}); 
+  char5.addEventListener("mouseover",(event)=>{char5.style="transition: 0.3s; transform: scale(1.2,1.2);"; char5.className="front"});
+  smglogo.addEventListener("mouseleave",(event)=>{smglogo.style="transition: 0.3s; transform: scale(1,1);"; smglogo.className="back"}); 
+  smglogo.addEventListener("mouseover",(event)=>{smglogo.style="transition: 0.3s; transform: scale(1.1,1.1);"; smglogo.className="front"}); 
+  char6.addEventListener("mouseleave",(event)=>{char6.style="transition: 0.3s; transform: scale(1,1);"; char6.className="back"}); 
+  char6.addEventListener("mouseover",(event)=>{char6.style="transition: 0.3s; transform: scale(1.2,1.2);"; char6.className="front"});  
+  char7.addEventListener("mouseleave",(event)=>{char7.style="transition: 0.3s; transform: scale(1,1);"; char7.className="back"}); 
+  char7.addEventListener("mouseover",(event)=>{char7.style="transition: 0.3s; transform: scale(1.2,1.2);"; char7.className="front"});
+ 
+
+   function imgsf() {
+    document.getElementById("toptitle").style.opacity=(100-i*2.2).toString()+"%"
+    document.getElementById("charlist").style.opacity=(100-i*2.2).toString()+"%"
+    imgnode.style.top=((i-100).toString())+"px"
+    imgnode.style.opacity=i2.toString()+"%"
+    i++;
+    if (i<100) {
+     i2++;
+    } else {
+     i2=i2-1.1;
+    } 
+    if (i<200) {
+     setTimeout(imgsf, 30);
+    } 
+   }
+  imgsf();
+ }
+
+function outoforder() {
+   alert("We're Sorry But This Is Currently Out Of Order. Please Try Again Later.")
+}
+function outoforder2() {
+ alert("To Be Added At A Later Date")
+}
+function outoforder3() {
+ alert("This Currently Doesn't Work")
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</script>
 
 
 <center>
