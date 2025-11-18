@@ -121,7 +121,26 @@
   char7.addEventListener("mouseleave",(event)=>{char7.style="transition: 0.3s; transform: scale(1,1);"; char7.className="back"}); 
   char7.addEventListener("mouseover",(event)=>{char7.style="transition: 0.3s; transform: scale(1.2,1.2);"; char7.className="front"});
  
-
+  function scare() {
+   document.getElementsByTagName("audio")[0].pause();
+   document.getElementsByTagName("audio")[0].src="https://randomness69js.github.io/loe.mp3";
+   document.getElementsByTagName("audio")[0].play();
+   document.getElementsByTagName("audio")[0].loop=false
+   document.getElementsByTagName("audio")[0].onended = function() {document.location.href="https://randomness69js.github.io/"}
+   imgnode=document.createElement("img")
+   imgnode.style.width="100%"
+   imgnode.style.zIndex="800"
+   imgnode.style.pointerEvents="none"
+   imgnode.style.height="100%"
+   imgnode.style.position="absolute"
+   imgnode.style.top="-100px"
+   imgnode.style.left="0%"
+   imgnode.src="https://randomness69js.github.io/tand.jpg"
+   document.body.appendChild(imgnode)
+   document.body.style.overflow="hidden"
+   var i=0
+   var i2=0
+   document.getElementById("devkit").onclick=null;
    function imgsf() {
     document.getElementById("toptitle").style.opacity=(100-i*2.2).toString()+"%"
     document.getElementById("charlist").style.opacity=(100-i*2.2).toString()+"%"
